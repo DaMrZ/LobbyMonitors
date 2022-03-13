@@ -10,19 +10,19 @@ function mWrite(color,size,x,y,text)
     m.write(text)
 end
 
---function LobbyWest()
---    m.clear()
---    m.setTextColor(colors.green)
---    bf.writeOn(m,1,"Portal Hall")
---    mWrite(colors.blue,1,4,10,"Where all the Portalling happens")
---end
+function LobbyWest()
+    m.clear()
+    m.setTextColor(colors.green)
+    bf.writeOn(m,1,"Portal Hall")
+    mWrite(colors.blue,1,4,10,"Where all the Portalling happens")
+end
 
---function LobbyEast()
---    m.clear()
---    m.setTextColor(colors.pink)
---    bf.writeOn(m,1,"General Area")
---    mwrite(colors.blue,1,4,10,"General stuffs and things")
---end
+function LobbyEast()
+    m.clear()
+    m.setTextColor(colors.pink)
+    bf.writeOn(m,1,"General Area")
+    mwrite(colors.blue,1,4,10,"General stuffs and things")
+end
 
 function LobbyNorth()
     m.clear()
@@ -31,12 +31,12 @@ function LobbyNorth()
     mWrite(colors.blue,1,4,10,"What happens in the north wing?")
 end
 
---function LobbySouth()
---    m.clear()
---    m.setTextColor(colors.purple)
---    bf.writeOn(m,1,"Power Hall")
---    mWrite(colors.blue,1,4,10,"Where all the generation happens")
---end
+function LobbySouth()
+    m.clear()
+    m.setTextColor(colors.purple)
+    bf.writeOn(m,1,"Power Hall")
+    mWrite(colors.blue,1,4,10,"Where all the generation happens")
+end
 
 --Obtaining the label of the computer to confirm which function to run
 local lobby = os.getComputerLabel()
@@ -46,7 +46,7 @@ elseif lobby == "LobbyWest" then
     LobbyWest()
 elseif lobby == "LobbyNorth" then
     LobbyNorth()
-else lobby == "LobbySouth" then
+elseif lobby == "LobbySouth" then
     LobbySouth()
 end
 
