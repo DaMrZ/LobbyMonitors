@@ -10,14 +10,14 @@ function mWrite(color,size,x,y,text)
     m.write(text)
 end
 
-function LobbyEast()
+function LobbyWest()
     m.clear()
     m.setTextColor(colors.green)
     bf.writeOn(m,1,"Portal Hall")
     mWrite(colors.blue,1,4,10,"Where all the Portalling happens")
 end
 
-function LobbyWest()
+function LobbyEast()
     m.clear()
 end
 
