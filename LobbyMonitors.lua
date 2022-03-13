@@ -3,25 +3,6 @@ local bf = require("bigfont")
 --Declaring where the monitors will be
 local m = peripheral.wrap("back")
 
---Obtaining the label of the computer to confirm which function to run
-local lobby = os.getComputerLabel()
-if lobby == "LobbyEast" then
-    Write("Monitor Lobby East has been detected")
-    LobbyEast
-end
-if lobby == "LobbyWest" then
-    Write("Monitor Lobby West has been detected")
-    LobbyWest
-elseif lobby == "LobbyNorth" then
-    Write("Monitor Lobby North has been detected")
-    LobbyNorth
-elseif lobby == "LobbySouth" then
-    Write("Monitor Lobby Soth has been detected")
-    LobbySouth
-else
-    Write("Orientation has not been found. Please set the label correctly")
-end
-
 function mWrite(color,size,x,y,text)
     m.setTextColor(color)
     m.setTextScale(size)
@@ -37,13 +18,27 @@ function LobbyEast()
 end
 
 function LobbyWest()
-
+    m.clear()
 end
 
 function LobbyNorth()
-
+    m.clear()
 end
 
 function LobbySouth()
-
+    m.clear()
 end
+
+--Obtaining the label of the computer to confirm which function to run
+local lobby = os.getComputerLabel()
+if lobby == "LobbyEast" then
+    LobbyEast()
+end
+if lobby == "LobbyWest" then
+    LobbyWest()
+elseif lobby == "LobbyNorth" then
+    LobbyNorth()
+else lobby == "LobbySouth" then
+    LobbySouth()
+end
+
