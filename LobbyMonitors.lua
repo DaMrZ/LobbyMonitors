@@ -19,14 +19,23 @@ end
 
 function LobbyEast()
     m.clear()
+    m.setTextColor(colors.pink)
+    bf.writeOn(m,1,"General Area")
+    mwrite(colors.blue,1,4,10,"General stuffs and things")
 end
 
 function LobbyNorth()
     m.clear()
+    m.setTextColor(colors.yellow)
+    bf.writeOn(m,1,"North Wing")
+    mWrite(colors.blue,1,4,10,"What happens in the north wing?")
 end
 
 function LobbySouth()
     m.clear()
+    m.setTextColor(colors.purple)
+    bf.writeOn(m,1,"Power Hall")
+    mWrite(colors.blue,1,4,10,"Where all the generation happens")
 end
 
 --Obtaining the label of the computer to confirm which function to run
